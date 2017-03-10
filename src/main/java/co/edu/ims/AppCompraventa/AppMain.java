@@ -3,6 +3,7 @@ package co.edu.ims.AppCompraventa;
 import co.edu.ims.compraventa.Categoria;
 import co.edu.ims.compraventa.Cliente;
 import co.edu.ims.compraventa.Producto;
+import co.edu.ims.compraventa.Factura;
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,9 @@ public class AppMain {
         System.out.println("Datos producto"+jsonproducto);
         String jscliente = gson.toJson(cliente);
         System.out.println("Datos del Cliente:"+jscliente);
+        
+        
+        Factura num1 = new Factura(1,"FAC1","09/03/2017",cliente);
         
         
     }
