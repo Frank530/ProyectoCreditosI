@@ -37,13 +37,16 @@ public class AppMain {
         detalle.add(nuevo);
         
         Gson gson = new Gson();
-        String jscategotia = gson.toJson(aseo);
-        System.out.println("Datos de la categoria:"+jscategotia);
-         String jscliente = gson.toJson(cliente);
-        System.out.println("Datos del Cliente:"+jscliente);
-        String jsonproducto = gson.toJson(escoba);
-        System.out.println("Datos producto"+jsonproducto);
-        
+        String jsCategotia = gson.toJson(aseo);
+        System.out.println("Datos de la categoria:"+jsCategotia);
+         String jsCliente = gson.toJson(cliente);
+        System.out.println("Datos del Cliente:"+jsCliente);
+        String jsonProducto = gson.toJson(escoba);
+        System.out.println("Datos del producto"+jsonProducto);
+        String jsonFactura = gson.toJson(num1);
+        System.out.println("Datos de la Factura"+jsonFactura);
+        String jsonDetalle = gson.toJson(nuevo);
+        System.out.println("Datos del Detalle"+jsonDetalle);
         
     }
     
