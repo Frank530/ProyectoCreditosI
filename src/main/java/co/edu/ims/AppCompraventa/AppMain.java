@@ -2,6 +2,7 @@ package co.edu.ims.AppCompraventa;
 
 import co.edu.ims.compraventa.Categoria;
 import co.edu.ims.compraventa.Cliente;
+import co.edu.ims.compraventa.Detalle;
 import co.edu.ims.compraventa.Producto;
 import co.edu.ims.compraventa.Factura;
 import com.google.gson.Gson;
@@ -24,17 +25,24 @@ public class AppMain {
         cliente.add(nombre);
         
         Producto escoba = new Producto(1, "Escoba", 20000, categorias);
+        List<Producto> producto = new ArrayList<>();
+        producto.add(escoba);
+        
+        Factura num1 = new Factura(1,"FAC1","09/03/2017",cliente);
+        List<Factura> factura = new ArrayList<>();
+        factura.add(num1);
+        
+        Detalle nuevo = new Detalle(1, "10", factura, producto);
+        List<Detalle> detalle = new ArrayList<>();
+        detalle.add(nuevo);
         
         Gson gson = new Gson();
         String jscategotia = gson.toJson(aseo);
-        System.out.println("Datos del Producto:"+jscategotia);
+        System.out.println("Datos de la categoria:"+jscategotia);
+         String jscliente = gson.toJson(cliente);
+        System.out.println("Datos del Cliente:"+jscliente);
         String jsonproducto = gson.toJson(escoba);
         System.out.println("Datos producto"+jsonproducto);
-        String jscliente = gson.toJson(cliente);
-        System.out.println("Datos del Cliente:"+jscliente);
-        
-        
-        Factura num1 = new Factura(1,"FAC1","09/03/2017",cliente);
         
         
     }
