@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
 public class Producto implements Serializable {
 
     @Id 
-    private int id;
+    private int id;//id 
     private String descripcion;
     private int valor;
     @OneToMany 
