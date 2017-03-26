@@ -16,11 +16,11 @@ import javax.persistence.OneToMany;
 @Entity
 public class Producto implements Serializable {
 
-    @Id
+    @Id 
     private int id;
     private String descripcion;
     private int valor;
-    @ManyToOne //relacion muchos a uno
+    @OneToMany 
     @JoinColumn(name ="fk_categoria")
     private List <Categoria> idCategoria;
     

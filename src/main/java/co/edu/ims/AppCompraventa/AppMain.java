@@ -14,7 +14,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 /**
- *t
+ *
  * @author Silvia
  */
 public class AppMain {
